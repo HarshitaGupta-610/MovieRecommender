@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender – Welcome</title>
+
+  <style>
+    /* GENERAL PAGE SETUP */
+    body {
+      cursor: none !important;
+      animation: fadeIn 1s ease-in-out;
+      background: linear-gradient(135deg, #e8fff0, #d9ffe9);
+      min-height: 100vh;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* BLUE CUSTOM CURSOR */
+    .cursor-dot {
+  width: 12px;
+  height: 12px;
+  background: #0090ff;
+  border-radius: 50%;
+  position: fixed; /* ← change from absolute to fixed */
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0); /* more accurate */
+  z-index: 9999;
+}
+
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      margin-top: 80px;
+      padding: 0 20px;
+      color: #006c3c;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #222;
+      margin-top: 0;
+      animation: fadeUp 1.2s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* INPUT + BUTTON */
+    .name-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .name-input input {
+      width: 320px;
+      padding: 12px 15px;
+      border: 2px solid #00c357;
+      border-radius: 10px;
+      font-size: 16px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .name-input input:focus {
+      box-shadow: 0 0 12px rgba(0, 200, 80, 0.45);
+      transform: scale(1.03);
+      outline: none;
+    }
+
+    .name-input button {
+      width: 200px;
+      padding: 12px;
+      background: #00c357;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .name-input button:hover {
+      transform: scale(1.05);
+      background: #00a849;
+    }
+
+    .name-input button:active {
+      transform: scale(0.95);
+    }
+
+    .name-input button::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      transform: scale(0);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .name-input button:active::after {
+      transform: scale(3);
+      opacity: 1;
+      transition: 0.4s ease-out;
+      top: var(--y);
+      left: var(--x);
+    }
+
+    /* FEATURES SECTION */
+    .features {
+      margin-top: 60px;
+      text-align: center;
+      animation: fadeUp 1.6s ease-out;
+    }
+
+    .features-grid {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px 25px;
+      min-width: 220px;
+      font-size: 17px;
+      font-weight: 500;
+      color: #0f5132;
+      border: 2px solid #00b44e;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.04);
+      background: #eafff3;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+
+    /* FLOATING PARTICLES */
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(0, 150, 80, 0.45);
+      border-radius: 50%;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-230px); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- BLUE CURSOR -->
+<div class="cursor-dot" id="cursor"></div>
+<div id="particles"></div>
+
+<div class="hero">
+  <h1>Welcome to Your Movie Guide 🎬</h1>
+  <p>Find your perfect movie instantly with smart Python logic.</p>
+
+  <form action="/selections" method="POST">
+    <div class="name-input">
+      <input type="text" name="name" placeholder="Enter Your Name" required>
+      <button type="submit">Start →</button>
+    </div>
+  </form>
+
+  <div class="features">
+    <div class="features-grid">
+      <div class="card">✓ Python AI Filtering</div>
+      <div class="card">✓ Binge Watch with your interest.</div>
+      <div class="card">✓ Different Varieties</div>
+      <div class="card">✓ From Latest to Old</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* BLUE CURSOR FOLLOW */
+  const cursor = document.getElementById("cursor");
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+  });
+
+  /* RIPPLE BUTTON EFFECT */
+  document.querySelector("button").addEventListener("click", function(e){
+    const rect = this.getBoundingClientRect();
+    this.style.setProperty("--x", (e.clientX - rect.left) + "px");
+    this.style.setProperty("--y", (e.clientY - rect.top) + "px");
+  });
+
+  /* FLOATING PARTICLES */
+  const particles = document.getElementById("particles");
+  function createParticle() {
+    const p = document.createElement("div");
+    p.classList.add("particle");
+    p.style.left = Math.random() * window.innerWidth + "px";
+    p.style.top = (window.innerHeight + 25) + "px";
+    p.style.animationDuration = (5 + Math.random() * 4) + "s";
+    particles.appendChild(p);
+    setTimeout(() => p.remove(), 9000);
+  }
+  setInterval(createParticle, 350);
+</script>
+
+</body>
+</html>
