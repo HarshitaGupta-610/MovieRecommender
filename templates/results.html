@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Movie Recommendations</title>
+
+  <style>
+    body {
+      cursor: none;
+      background: linear-gradient(135deg, #e8fff0, #d9ffe9);
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .cursor-dot {
+      width: 12px;
+      height: 12px;
+      background: #0090ff;
+      border-radius: 50%;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .container {
+      margin-top: 70px;
+      padding: 30px 40px;
+      width: 850px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      animation: fadeIn 1s ease-out;
+    }
+
+    h2 {
+      color: #007d3a;
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .movie-card {
+      background: #eafff2;
+      border: 2px solid #00c357;
+      margin-top: 20px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      background: #d9ffe9;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #004d26;
+    }
+
+    .tiny {
+      font-size: 14px;
+      color: #333;
+      margin-top: 3px;
+    }
+
+    .desc {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    .button-group {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    button {
+      padding: 13px 20px;
+      background: #00c357;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: #009c49;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="cursor-dot" id="cursor"></div>
+
+<div class="container">
+
+  <h2>🎬 Your Movie Recommendations</h2>
+
+  {% for m in movies %}
+  <div class="movie-card">
+    <div class="title">{{ m.title }} ({{ m.year }})</div>
+
+    <div class="tiny">
+      ⭐ Rating: {{ m.rating }} |
+      💥 Popularity: {{ m.popularity }} |
+      🎭 Actors: {{ m.actors | join(', ') }}
+    </div>
+
+    <div class="desc">
+      {{ m.description }}
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="button-group">
+    <button onclick="window.location.href='/'">🏠 Back to Home</button>
+    <button onclick="window.location.href='/selections'">🎛 Back to Selections</button>
+  </div>
+
+</div>
+
+<script>
+  const cursor = document.getElementById("cursor");
+  document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+</script>
+
+</body>
+</html>
