@@ -1,0 +1,262 @@
+[
+  {
+    "title": "Inception",
+    "industry": "Hollywood",
+    "genres": [
+      "Thriller",
+      "Sci-Fi"
+    ],
+    "rating": 8.8,
+    "popularity": 12,
+    "year": 2010,
+    "duration": 148
+  },
+  {
+    "title": "Interstellar",
+    "industry": "Hollywood",
+    "genres": [
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": 8.6,
+    "popularity": 11,
+    "year": 2014,
+    "duration": 169
+  },
+  {
+    "title": "The Dark Knight",
+    "industry": "Hollywood",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "rating": 9.0,
+    "popularity": 11,
+    "year": 2008,
+    "duration": 152
+  },
+  {
+    "title": "Titanic",
+    "industry": "Hollywood",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "rating": 7.9,
+    "popularity": 10,
+    "year": 1997,
+    "duration": 195
+  },
+  {
+    "title": "The Conjuring",
+    "industry": "Hollywood",
+    "genres": [
+      "Horror"
+    ],
+    "rating": 7.5,
+    "popularity": 8,
+    "year": 2013,
+    "duration": 112
+  },
+  {
+    "title": "A Quiet Place",
+    "industry": "Hollywood",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "rating": 7.5,
+    "popularity": 9,
+    "year": 2018,
+    "duration": 90
+  },
+  {
+    "title": "Avatar",
+    "industry": "Hollywood",
+    "genres": [
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": 7.8,
+    "popularity": 11,
+    "year": 2009,
+    "duration": 162
+  },
+  {
+    "title": "3 Idiots",
+    "industry": "Bollywood",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 8.4,
+    "popularity": 13,
+    "year": 2009,
+    "duration": 170
+  },
+  {
+    "title": "Drishyam",
+    "industry": "Bollywood",
+    "genres": [
+      "Thriller"
+    ],
+    "rating": 8.3,
+    "popularity": 9,
+    "year": 2015,
+    "duration": 163
+  },
+  {
+    "title": "Andhadhun",
+    "industry": "Bollywood",
+    "genres": [
+      "Mystery",
+      "Thriller"
+    ],
+    "rating": 8.2,
+    "popularity": 8,
+    "year": 2018,
+    "duration": 139
+  },
+  {
+    "title": "Tumbbad",
+    "industry": "Bollywood",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "rating": 8.1,
+    "popularity": 7,
+    "year": 2018,
+    "duration": 104
+  },
+  {
+    "title": "Hera Pheri",
+    "industry": "Bollywood",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 8.2,
+    "popularity": 12,
+    "year": 2000,
+    "duration": 145
+  },
+  {
+    "title": "Golmaal",
+    "industry": "Bollywood",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 7.8,
+    "popularity": 7,
+    "year": 2006,
+    "duration": 150
+  },
+  {
+    "title": "Bahubali",
+    "industry": "Tollywood",
+    "genres": [
+      "Adventure",
+      "Drama"
+    ],
+    "rating": 8.2,
+    "popularity": 11,
+    "year": 2015,
+    "duration": 159
+  },
+  {
+    "title": "RRR",
+    "industry": "Tollywood",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 8.0,
+    "popularity": 10,
+    "year": 2022,
+    "duration": 187
+  },
+  {
+    "title": "Sita Ramam",
+    "industry": "Tollywood",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "rating": 8.1,
+    "popularity": 7,
+    "year": 2022,
+    "duration": 126
+  },
+  {
+    "title": "KGF",
+    "industry": "Kollywood",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 8.0,
+    "popularity": 10,
+    "year": 2018,
+    "duration": 155
+  },
+  {
+    "title": "Kantara",
+    "industry": "Kollywood",
+    "genres": [
+      "Mystery",
+      "Drama"
+    ],
+    "rating": 8.3,
+    "popularity": 8,
+    "year": 2022,
+    "duration": 148
+  },
+  {
+    "title": "2018",
+    "industry": "Mollywood",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 8.5,
+    "popularity": 7,
+    "year": 2023,
+    "duration": 150
+  },
+  {
+    "title": "Bangalore Days",
+    "industry": "Mollywood",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 8.3,
+    "popularity": 8,
+    "year": 2014,
+    "duration": 171
+  },
+  {
+    "title": "Kirik Party",
+    "industry": "Sandalwood",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "rating": 8.4,
+    "popularity": 8,
+    "year": 2016,
+    "duration": 165
+  },
+  {
+    "title": "Ugramm",
+    "industry": "Sandalwood",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "rating": 8.2,
+    "popularity": 6,
+    "year": 2014,
+    "duration": 153
+  }
+]

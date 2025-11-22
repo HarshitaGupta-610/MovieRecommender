@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e8f9ee;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: none; /* hide default cursor */
+}
+
+.container {
+  width: 380px;
+  background: #ffffff;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container-wide {
+  width: 500px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  color: #0b6e34;
+}
+
+p {
+  color: #333;
+  margin: 5px 0 15px 0;
+}
+
+/* Inputs, selects, buttons */
+input,
+select,
+button {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 2px solid #34c759;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Button styling */
+button {
+  background: #34c759;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  background: #28a745;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+
+/* Blue circular cursor */
+.cursor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00a2ff;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* List of movies */
+ul.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+ul.movie-list li {
+  padding: 8px;
+  margin-bottom: 4px;
+  font-size: 17px;
+  color: #0b6e34;
+  font-weight: 500;
+}
+
+/* Stats block */
+.stats {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #333;
+  text-align: left;
+}
+
+.stats ul {
+  padding-left: 18px;
+}

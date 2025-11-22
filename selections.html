@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Your Preferences</title>
+
+  <style>
+    body {
+      cursor: none;
+      background: linear-gradient(135deg, #e8fff0, #d9ffe9);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .cursor-dot {
+      width: 12px;
+      height: 12px;
+      background: #0090ff;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+
+    .container {
+      margin-top: 80px;
+      background: #ffffff;
+      padding: 35px 45px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      text-align: center;
+      animation: fadeIn 0.9s ease-out;
+    }
+
+    h2 {
+      color: #007d3a;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 2px solid #00c357;
+      border-radius: 10px;
+      background: #f9fff9;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    select:hover {
+      background: #eaffea;
+      transform: scale(1.02);
+    }
+
+    select:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 200, 80, 0.45);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #00c357;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00a84a;
+      transform: scale(1.04);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="cursor-dot" id="cursor"></div>
+
+<form action="/results" method="POST" class="container">
+  
+  <h2>Choose Your Movie Style 🎥</h2>
+  <p>Select the industry, genre, and type of movie you prefer.</p>
+
+  <!-- INDUSTRY with descriptions -->
+  <select name="industry" required>
+    <option value="Bollywood">Bollywood (Hindi Cinema)</option>
+    <option value="Hollywood">Hollywood (English International Cinema)</option>
+    <option value="Tollywood">Tollywood (Telugu Cinema)</option>
+    <option value="Kollywood">Kollywood (Tamil Cinema)</option>
+    <option value="Mollywood">Mollywood (Malayalam Cinema)</option>
+    <option value="Sandalwood">Sandalwood (Kannada Cinema)</option>
+  </select>
+
+  <!-- GENRE -->
+  <select name="genre" required>
+    <option value="Comedy">Comedy</option>
+    <option value="Horror">Horror</option>
+    <option value="Romance">Romance</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Action">Action</option>
+    <option value="Drama">Drama</option>
+    <option value="Sci-Fi">Sci-Fi</option>
+    <option value="Mystery">Mystery</option>
+  </select>
+
+  <!-- MOVIE TYPE -->
+  <select name="movie_type" required>
+    <option value="Top Rated">Top Rated (Critically Loved)</option>
+    <option value="Popular">Popular (Trending & Widely Watched)</option>
+    <option value="Underrated">Underrated (Hidden Gems)</option>
+    <option value="New Release">New Release (Latest Movies)</option>
+    <option value="Classic">Classic (Old but Gold)</option>
+    <option value="Short Movie (&lt;2h)">Short Movie (&lt;2h Runtime)</option>
+  </select>
+
+  <button type="submit">Get Recommendations →</button>
+</form>
+
+<script>
+  /* Blue Cursor Follow */
+  const cursor = document.getElementById("cursor");
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+</script>
+
+</body>
+</html>

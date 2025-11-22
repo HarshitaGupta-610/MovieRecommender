@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2025-11-23T03:19:41",
+    "industry": "sandalwood",
+    "genre": "comedy",
+    "movie_type": "Top Rated",
+    "recommended": [
+      "Kirik Party"
+    ]
+  },
+  {
+    "timestamp": "2025-11-23T03:21:46",
+    "industry": "mollywood",
+    "genre": "adventure",
+    "movie_type": "Classic",
+    "recommended": [
+      "Bahubali",
+      "KGF",
+      "Interstellar",
+      "Avatar",
+      "RRR"
+    ]
+  },
+  {
+    "timestamp": "2025-11-23T03:23:13",
+    "industry": "mollywood",
+    "genre": "sci-fi",
+    "movie_type": "Classic",
+    "recommended": [
+      "Inception",
+      "Avatar",
+      "Interstellar"
+    ]
+  },
+  {
+    "timestamp": "2025-11-23T03:27:23",
+    "industry": "hollywood",
+    "genre": "thriller",
+    "movie_type": "New Release",
+    "recommended": [
+      "Inception",
+      "The Dark Knight",
+      "A Quiet Place"
+    ]
+  },
+  {
+    "timestamp": "2025-11-23T03:33:33",
+    "industry": "bollywood",
+    "genre": "comedy",
+    "movie_type": "Top Rated",
+    "recommended": [
+      "3 Idiots",
+      "Hera Pheri"
+    ]
+  },
+  {
+    "timestamp": "2025-11-23T03:36:12",
+    "industry": "bollywood",
+    "genre": "comedy",
+    "movie_type": "Top Rated",
+    "recommended": [
+      {
+        "title": "3 Idiots",
+        "industry": "Bollywood",
+        "genres": [
+          "Comedy",
+          "Drama"
+        ],
+        "rating": 8.4,
+        "popularity": 11,
+        "year": 2009,
+        "duration": 170,
+        "score": 9.85
+      },
+      {
+        "title": "Hera Pheri",
+        "industry": "Bollywood",
+        "genres": [
+          "Comedy"
+        ],
+        "rating": 8.2,
+        "popularity": 10,
+        "year": 2000,
+        "duration": 145,
+        "score": 9.23
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-11-23T03:37:06",
+    "industry": "bollywood",
+    "genre": "comedy",
+    "movie_type": "Top Rated",
+    "recommended": [
+      {
+        "title": "3 Idiots",
+        "industry": "Bollywood",
+        "genres": [
+          "Comedy",
+          "Drama"
+        ],
+        "rating": 8.4,
+        "popularity": 12,
+        "year": 2009,
+        "duration": 170,
+        "score": 10.57
+      },
+      {
+        "title": "Hera Pheri",
+        "industry": "Bollywood",
+        "genres": [
+          "Comedy"
+        ],
+        "rating": 8.2,
+        "popularity": 11,
+        "year": 2000,
+        "duration": 145,
+        "score": 10.03
+      }
+    ]
+  }
+]
